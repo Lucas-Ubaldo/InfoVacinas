@@ -13,8 +13,9 @@ public class Gestante extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestante);
-
         btnVoltarGestante = findViewById(R.id.btnVoltarGestante);
+
+        //Botão para voltar para tela principal
         btnVoltarGestante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

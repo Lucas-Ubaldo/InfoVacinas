@@ -13,20 +13,19 @@ import android.widget.TextView;
 public class Creditos extends AppCompatActivity {
 
     ImageView btnVoltarCreditos;
-    TextView detailsText;
-    LinearLayout layout;
-
+    TextView txtInfoIntegrantes;
+    LinearLayout layout1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creditos);
 
-        detailsText = findViewById(R.id.txtInfoIntegrantes);
-        layout = findViewById(R.id.layout);
-
+        txtInfoIntegrantes = findViewById(R.id.txtInfoIntegrantes);
+        layout1 = findViewById(R.id.layout1);
         btnVoltarCreditos = findViewById(R.id.btnVoltarCreditos);
 
+        //Botão para voltar para tela principal
         btnVoltarCreditos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,11 +35,12 @@ public class Creditos extends AppCompatActivity {
         });
 
     }
+
+    /*Classe para expandir o cardview junto com o conteúdo
     public void expand (View view){
-        int v = (detailsText.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
-        TransitionManager.beginDelayedTransition(layout, new AutoTransition());
-        detailsText.setVisibility(v);
+        int v = (txtInfoIntegrantes.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+        TransitionManager.beginDelayedTransition(layout1, new AutoTransition());
+        txtInfoIntegrantes.setVisibility(v);
 
-    }
-
+    } */
 }

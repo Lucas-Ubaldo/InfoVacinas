@@ -13,8 +13,9 @@ public class Indigena extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indigena);
-
         btnVoltarIndigena = findViewById(R.id.btnVoltarIndigena);
+
+        //Botão para voltar para a tela principal
         btnVoltarIndigena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

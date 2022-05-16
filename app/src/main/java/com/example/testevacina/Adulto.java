@@ -14,18 +14,18 @@ import android.widget.TextView;
 public class Adulto extends AppCompatActivity {
 
     ImageView btnVoltarAdulto;
-    TextView detailsText;
-    LinearLayout layout;
+    TextView txtInfoAdulto1;
+    LinearLayout layout1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adulto);
         btnVoltarAdulto = findViewById(R.id.btnVoltarAdulto);
 
-        detailsText = findViewById(R.id.txtInfoAdulto2);
-        layout = findViewById(R.id.layout);
+        txtInfoAdulto1 = findViewById(R.id.txtInfoAdulto1);
+        layout1 = findViewById(R.id.layout1);
 
-
+        //Ao clicar no botão de voltar no canto superior esquerdo, irá retornar para tela principal
         btnVoltarAdulto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,10 +37,12 @@ public class Adulto extends AppCompatActivity {
 
 
     }
-    public void expand (View view){
-        int v = (detailsText.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
-        TransitionManager.beginDelayedTransition(layout, new AutoTransition());
-        detailsText.setVisibility(v);
+
+    //Classe para expandir o cardview junto com o conteúdo
+    public void expand1 (View view){
+        int v = (txtInfoAdulto1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+        TransitionManager.beginDelayedTransition(layout1, new AutoTransition());
+        txtInfoAdulto1.setVisibility(v);
 
     }
 

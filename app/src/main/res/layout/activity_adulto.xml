@@ -64,7 +64,7 @@
                 tools:ignore="MissingConstraints">
 
                 <androidx.cardview.widget.CardView
-                    android:onClick="expand"
+                    android:onClick="expand1"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -80,14 +80,13 @@
                     tools:layout_editor_absoluteY="98dp">
 
                     <LinearLayout
-                        android:id="@+id/layout"
+                        android:id="@+id/layout1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txtInfoAdulto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
@@ -101,7 +100,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/txtInfoAdulto2"
+                            android:id="@+id/txtInfoAdulto1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"

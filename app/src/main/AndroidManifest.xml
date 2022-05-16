@@ -11,7 +11,8 @@
         android:theme="@style/Theme.TesteVacina">
         <activity
             android:name=".Creditos"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Indigena"
             android:exported="false"

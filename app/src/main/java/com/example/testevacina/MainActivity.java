@@ -21,8 +21,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView btnAdulto, btnGestante, btnIndigena, btnCreditos, imgUsc;
-    TextView txtSobreVacina, txtSobreVacina2,txtSobreVacina3;
-    LinearLayout layout, layout2, layout3;
+    TextView txtSobreVacina1, txtSobreVacina2,txtSobreVacina3;
+    LinearLayout layout1, layout2, layout3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +35,15 @@ public class MainActivity extends AppCompatActivity {
         btnCreditos = findViewById(R.id.btnCreditos);
         imgUsc = findViewById(R.id.imgUsc);
 
-        txtSobreVacina = findViewById(R.id.txtSobreVacina);
-        layout = findViewById(R.id.layout);
+        txtSobreVacina1 = findViewById(R.id.txtSobreVacina1);
+        layout1 = findViewById(R.id.layout1);
         txtSobreVacina2 = findViewById(R.id.txtSobreVacina2);
         layout2 = findViewById(R.id.layout2);
         txtSobreVacina3 = findViewById(R.id.txtSobreVacina3);
         layout3 = findViewById(R.id.layout3);
 
 
+        //Responsável para direcionar ao site da unisagrado ao clicar na logo da universidade.
         imgUsc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Responsável para abrir a tela onde contém conteúdo sobre vacinas para adultos junto com uma transição entre essas telas.
         btnAdulto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Responsável para abrir a tela onde contém conteúdo sobre vacinas para indígenas junto com uma transição entre essas telas.
         btnIndigena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 //startActivity(indigena);
             }
         });
+
+        //Responsável para abrir a tela onde contém conteúdo sobre vacinas para gestantes junto com uma transição entre essas telas.
         btnGestante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Responsável para abrir a tela de créditos onde contém as informações do curso, dos integrantes, etc.
         btnCreditos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,18 +98,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void expand (View view){
-        int v = (txtSobreVacina.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
-        TransitionManager.beginDelayedTransition(layout, new AutoTransition());
-        txtSobreVacina.setVisibility(v);
+
+    //Classe do primeiro cardview, onde ao clicar neste card o conteúdo que está "invisível" irá aparecer e expandir
+    public void expand1 (View view){
+        int v = (txtSobreVacina1.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
+        TransitionManager.beginDelayedTransition(layout1, new AutoTransition());
+        txtSobreVacina1.setVisibility(v);
 
     }
+
+    //Classe do segundo cardview
     public void expand2 (View view){
         int v = (txtSobreVacina2.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
         TransitionManager.beginDelayedTransition(layout2, new AutoTransition());
         txtSobreVacina2.setVisibility(v);
 
     }
+
+    //Classe do terceiro cardview
     public void expand3 (View view){
         int v = (txtSobreVacina3.getVisibility() == View.GONE)? View.VISIBLE: View.GONE;
         TransitionManager.beginDelayedTransition(layout3, new AutoTransition());
